@@ -30,18 +30,32 @@ store = {
         {'quantity': 43, 'price': 97},
     ],
 }
-
-# Рассчитать на какую сумму лежит каждого товара на складе
-# например для ламп
-
 lamps_cost = store[goods['Лампа']][0]['quantity'] * store[goods['Лампа']][0]['price']
 # или проще (/сложнее ?)
 lamp_code = goods['Лампа']
+Table_code = goods['Стол']
+Sofa_code = goods['Диван']
+Chare_code = goods['Стул']
+
 lamps_item = store[lamp_code][0]
+Table_item = store[Table_code][0]
+Sofa_item = store[Sofa_code][0]
+Chare_item = store[Chare_code][0]
+
 lamps_quantity = lamps_item['quantity']
+Table_quantity = Table_item['quantity']
+Sofa_quantity = Sofa_item['quantity']
+Chare_quantity = Chare_item['quantity']
+
 lamps_price = lamps_item['price']
+Table_price = Table_item['price']
+Sofa_price = Sofa_item['price']
+Chare_price = Chare_item['price']
+
 lamps_cost = lamps_quantity * lamps_price
-print('Лампа -', lamps_quantity, 'шт, стоимость', lamps_cost, 'руб')
+Table_cost = Table_quantity * Table_price
+Sofa_cost = Sofa_quantity * Sofa_price
+Chare_cost = Chare_quantity * Chare_price
 
 # Вывести стоимость каждого товара на складе: один раз распечать сколько всего столов, стульев и т.д. на складе
 # Формат строки <товар> - <кол-во> шт, стоимость <общая стоимость> руб
@@ -49,8 +63,10 @@ print('Лампа -', lamps_quantity, 'шт, стоимость', lamps_cost, '�
 # WARNING для знающих циклы: БЕЗ циклов. Да, с переменными; да, неэффективно; да, копипаста.
 # Это задание на ручное вычисление - что бы потом понять как работают циклы и насколько с ними проще жить.
 
-# TODO здесь ваш код
-
+print('Лампа -', lamps_quantity, 'шт, стоимость', lamps_cost, 'руб')
+print('Стол -', Table_quantity, 'шт, стоимость', Table_cost, 'руб')
+print('Диван -', Sofa_quantity, 'шт, стоимость', Sofa_cost, 'руб')
+print('Стул -', Chare_quantity, 'шт, стоимость', Chare_cost, 'руб')
 ##########################################################################################
 # ВНИМАНИЕ! После того как __ВСЯ__ домашняя работа сделана и запушена на сервер,         #
 # нужно зайти в ЛМС (LMS - Learning Management System ) по адресу http://go.skillbox.ru  #
